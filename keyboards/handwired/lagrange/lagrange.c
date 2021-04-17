@@ -13,10 +13,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
+#ifndef __arm__
 #include <LUFA/Drivers/USB/USB.h>
+#endif
 
 #include "lagrange.h"
+
+#ifndef __arm__
 
 #ifndef SPLIT_USB_TIMEOUT_POLL
 #    define SPLIT_USB_TIMEOUT_POLL 10
@@ -57,3 +60,4 @@ void keyboard_pre_init_kb(void) {
 
     keyboard_pre_init_user();
 }
+#endif

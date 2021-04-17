@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
+#ifndef __arm__
 #include <spi_master.h>
 
 #include "quantum.h"
@@ -173,3 +173,4 @@ void transport_slave_init(void) {
 
     shake_hands(false);
 }
+#endif
